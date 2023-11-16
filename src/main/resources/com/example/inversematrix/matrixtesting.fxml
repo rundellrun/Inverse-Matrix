@@ -1,24 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inversematrix.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: FF5353;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inversematrix.Controller">
    <children>
-      <RadioButton fx:id="two" layoutX="208.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#clickDimension" text="2x2">
+      <Rectangle arcHeight="45.0" arcWidth="45.0" fill="WHITE" height="202.0" layoutX="38.0" layoutY="157.0" stroke="WHITE" strokeType="INSIDE" width="194.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="45.0" arcWidth="45.0" fill="WHITE" height="202.0" layoutX="253.0" layoutY="157.0" stroke="WHITE" strokeType="INSIDE" width="253.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <RadioButton fx:id="two" layoutX="110.0" layoutY="219.0" mnemonicParsing="false" onMouseClicked="#clickDimension" text="2x2">
          <toggleGroup>
             <ToggleGroup fx:id="MatrixDimension" />
          </toggleGroup>
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
       </RadioButton>
-      <RadioButton fx:id="three" layoutX="259.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#clickDimension" text="3x3" toggleGroup="$MatrixDimension" />
-      <RadioButton fx:id="four" layoutX="313.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#clickDimension" text="4x4" toggleGroup="$MatrixDimension" />
-      <RadioButton fx:id="five" layoutX="361.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#clickDimension" text="5x5" toggleGroup="$MatrixDimension" />
-      <GridPane fx:id="matrix2" layoutX="266.0" layoutY="139.0" prefHeight="86.0" prefWidth="94.0" AnchorPane.bottomAnchor="174.4" AnchorPane.leftAnchor="266.0" AnchorPane.rightAnchor="239.20000000000002" AnchorPane.topAnchor="139.0">
+      <RadioButton fx:id="three" layoutX="111.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#clickDimension" text="3x3" toggleGroup="$MatrixDimension">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="four" layoutX="110.0" layoutY="279.0" mnemonicParsing="false" onMouseClicked="#clickDimension" text="4x4" toggleGroup="$MatrixDimension">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="five" layoutX="111.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#clickDimension" text="5x5" toggleGroup="$MatrixDimension">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></RadioButton>
+      <GridPane fx:id="matrix2" layoutX="325.0" layoutY="211.2" prefHeight="94.0" prefWidth="107.0" style="-fx-background-radius: 45;" visible="false" AnchorPane.bottomAnchor="195.2" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="369.4" AnchorPane.topAnchor="211.2">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -28,13 +63,13 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField fx:id="matrix211" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 1 1 0;" />
-            <TextField fx:id="matrix212" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 0 1 1;" GridPane.columnIndex="1" />
-            <TextField fx:id="matrix221" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 0 0;" GridPane.rowIndex="1" />
-            <TextField fx:id="matrixx222" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 0 0 1;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="matrix211" prefHeight="243.0" prefWidth="147.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 1 1 0;" />
+            <TextField fx:id="matrix212" prefHeight="241.0" prefWidth="147.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 0 1 1;" GridPane.columnIndex="1" />
+            <TextField fx:id="matrix221" prefHeight="239.0" prefWidth="147.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 0 0;" GridPane.rowIndex="1" />
+            <TextField fx:id="matrixx222" prefHeight="256.0" prefWidth="147.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 0 0 1;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
-      <GridPane fx:id="matrix3" layoutX="239.0" layoutY="139.0" prefHeight="122.0" prefWidth="130.0" visible="false">
+      <GridPane fx:id="matrix3" layoutX="288.0" layoutY="168.0" prefHeight="180.0" prefWidth="182.0" visible="false">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -46,18 +81,18 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField fx:id="matrix311" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 1 1 0;" />
-            <TextField fx:id="matrix312" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 1 1 1;" GridPane.columnIndex="1" />
-            <TextField fx:id="matrix313" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 0 1 1;" GridPane.columnIndex="2" />
-            <TextField fx:id="matrix321" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 0;" GridPane.rowIndex="1" />
-            <TextField fx:id="matrix322" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 1;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="matrix323" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 0 1 1;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <TextField fx:id="matrix331" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 0 0;" GridPane.rowIndex="2" />
-            <TextField fx:id="matrix332" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 0 1;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="matrix333" prefHeight="47.0" prefWidth="44.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 0 0 1;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="matrix311" prefHeight="244.0" prefWidth="62.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 1 1 0;" />
+            <TextField fx:id="matrix312" prefHeight="194.0" prefWidth="62.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 1 1 1;" GridPane.columnIndex="1" />
+            <TextField fx:id="matrix313" prefHeight="181.0" prefWidth="62.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 0 1 1;" GridPane.columnIndex="2" />
+            <TextField fx:id="matrix321" prefHeight="212.0" prefWidth="62.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 0;" GridPane.rowIndex="1" />
+            <TextField fx:id="matrix322" prefHeight="173.0" prefWidth="62.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 1;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="matrix323" prefHeight="201.0" prefWidth="62.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 0 1 1;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="matrix331" prefHeight="178.0" prefWidth="62.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 0 0;" GridPane.rowIndex="2" />
+            <TextField fx:id="matrix332" prefHeight="194.0" prefWidth="62.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 0 1;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="matrix333" prefHeight="154.0" prefWidth="62.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 0 0 1;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-      <GridPane fx:id="matrix4" layoutX="224.0" layoutY="139.0" prefHeight="149.0" prefWidth="159.0" visible="false">
+      <GridPane fx:id="matrix4" layoutX="288.0" layoutY="169.0" prefHeight="180.0" prefWidth="182.0" visible="false">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -71,25 +106,25 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField fx:id="matrix411" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 1 1 0;" />
-            <TextField fx:id="matrix412" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 1 1 1;" GridPane.columnIndex="1" />
-            <TextField fx:id="matrix413" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 1 1 1;" GridPane.columnIndex="2" />
-            <TextField fx:id="matrix414" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 0 1 1;" GridPane.columnIndex="3" />
-            <TextField fx:id="matrix421" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 0;" GridPane.rowIndex="1" />
-            <TextField fx:id="matrix422" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 1;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="matrix423" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 1;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <TextField fx:id="matrix424" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 0 1 1;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <TextField fx:id="matrix431" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 0;" GridPane.rowIndex="2" />
-            <TextField fx:id="matrix432" prefHeight="38.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 1;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="matrix433" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 1;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <TextField fx:id="matrix434" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 0 1 1;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <TextField fx:id="matrix441" prefHeight="37.0" prefWidth="38.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 0 0;" GridPane.rowIndex="3" />
-            <TextField fx:id="matrix442" prefHeight="37.0" prefWidth="38.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 0 1;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="matrix411" prefHeight="162.0" prefWidth="46.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 1 1 0;" />
+            <TextField fx:id="matrix412" prefHeight="186.0" prefWidth="46.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 1 1 1;" GridPane.columnIndex="1" />
+            <TextField fx:id="matrix413" prefHeight="174.0" prefWidth="46.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 1 1 1;" GridPane.columnIndex="2" />
+            <TextField fx:id="matrix414" prefHeight="210.0" prefWidth="46.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 0 0 1 1;" GridPane.columnIndex="3" />
+            <TextField fx:id="matrix421" prefHeight="127.0" prefWidth="46.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 0;" GridPane.rowIndex="1" />
+            <TextField fx:id="matrix422" prefHeight="46.0" prefWidth="78.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 1;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="matrix423" prefHeight="180.0" prefWidth="46.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 1;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="matrix424" prefHeight="135.0" prefWidth="46.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 0 1 1;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="matrix431" prefHeight="126.0" prefWidth="46.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 0;" GridPane.rowIndex="2" />
+            <TextField fx:id="matrix432" prefHeight="122.0" prefWidth="46.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 1;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="matrix433" prefHeight="116.0" prefWidth="46.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 1 1;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="matrix434" prefHeight="110.0" prefWidth="46.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 0 1 1;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="matrix441" prefHeight="157.0" prefWidth="46.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 0 0;" GridPane.rowIndex="3" />
+            <TextField fx:id="matrix442" prefHeight="171.0" prefWidth="46.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 0 1;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="matrix443" prefHeight="47.0" prefWidth="48.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 1 0 1;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <TextField fx:id="matrix444" prefHeight="47.0" prefWidth="44.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 0 0 1;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
          </children>
       </GridPane>
-      <GridPane fx:id="matrix5" layoutX="207.0" layoutY="139.0" prefHeight="180.0" prefWidth="194.0" visible="false">
+      <GridPane fx:id="matrix5" layoutX="276.0" layoutY="165.0" prefHeight="188.0" prefWidth="207.0" visible="false">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -132,5 +167,25 @@
             <TextField fx:id="matrix555" prefHeight="47.0" prefWidth="44.0" style="-fx-alignment: center; -fx-border-color: black; -fx-border-width: 1 0 0 1;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
          </children>
       </GridPane>
+      <Label layoutX="59.0" layoutY="176.0" text="Choose Dimension" textFill="#ff5353">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="207.0" layoutY="38.0" text="Inverse Matrix Calculator" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="180.0" layoutY="96.0" text="This program will calculate the inverse of a matrix given a dimension from 2x2 up to 5x5." />
+      <Rectangle arcHeight="45.0" arcWidth="45.0" fill="WHITE" height="202.0" layoutX="523.0" layoutY="158.0" stroke="WHITE" strokeType="INSIDE" width="253.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
    </children>
 </AnchorPane>
