@@ -222,6 +222,9 @@ public class Controller {
             matrix2.setVisible(false);
         }
     }
+    public double[][] calculateInverse(Matrix matrix){
+        return matrix.getInverse();
+    }
 
 }
 
